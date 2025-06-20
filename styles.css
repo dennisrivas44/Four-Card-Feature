@@ -12,11 +12,15 @@ main {
   position: absolute;
   font-family: "Poppins", sans-serif;
 }
+main header, main .cards-container {
+  transform: scale(1.2);
+  transform-origin: top center;
+}
 
 header {
   height: 10em;
   width: 100%;
-  margin-top: 5.25rem;
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +47,7 @@ header p {
 
 .cards-container {
   width: 100vw;
-  margin-top: 3rem;
+  margin-top: 5rem;
   max-width: 60rem;
   display: flex;
   justify-content: space-evenly;
@@ -66,17 +70,17 @@ header p {
   display: flex;
   flex-direction: column;
   box-shadow: 0.2rem 0.4rem 1.2rem 0 rgba(76.296, 78.3768, 97.104, 0.1), -0.2rem 0.4rem 1.2rem 0 rgba(76.296, 78.3768, 97.104, 0.05);
-  width: 22.5rem;
-  height: 10rem;
+  width: 15rem;
+  height: 9.5rem;
   margin-bottom: 1.5rem;
   padding: 1.5rem;
-  width: 15rem;
   border-radius: 2%;
 }
 .card h3 {
   font-size: 1rem;
   font-weight: 600;
   color: hsl(234, 12%, 34%);
+  padding-bottom: 0.1rem;
 }
 .card p {
   font-size: 0.69rem;

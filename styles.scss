@@ -1,3 +1,4 @@
+// Color Palette
 $red: hsl(0, 78%, 62%);
 $cyan: hsl(180, 62%, 55%);
 $orange: hsl(34, 97%, 64%);
@@ -5,13 +6,44 @@ $blue: hsl(212, 86%, 64%);
 $grey-500: hsl(234, 12%, 34%);
 $grey-400: hsl(212, 6%, 44%);
 $white: hsl(0, 0%, 100%);
+
+// Font
+$font-main: 'Poppins', sans-serif;
+$font-size-base: 1rem;
+$font-size-header: 1.9rem;
+$font-size-subheader: 0.91rem;
+$font-size-card-title: 1rem;
+$font-size-card-text: 0.69rem;
+$font-size-header-p: 0.78rem;
+
+// Font Weights
+$w1: 200; // Light
+$w2: 400; // Regular
+$w3: 600; // Bold
+
+// Layout
 $desktop: 1440px;
 $mobile: 375px;
-$font-main: 'Poppins', sans-serif;
-$w1: 200;
-$w2: 400;
-$w3: 600;
+$max-container-width: 60rem;
+$card-width: 15rem;
+$card-height: 9.5rem;
+$card-padding: 1.5rem;
+$card-radius: 2%;
+$card-shadow-1: 0.2rem 0.4rem 1.2rem 0 rgba($grey-500, 0.1);
+$card-shadow-2: -0.2rem 0.4rem 1.2rem 0 rgba($grey-500, 0.05);
+$header-margin-top: 6rem;
+$container-margin-top: 5rem;
+$header-height: 10em;
+$header-p-width: 28rem;
+$card-margin-bottom: 1.5rem;
 
+// Border
+$card-border-width: 0.25rem;
+
+// Responsive
+$breakpoint-tablet: 850px;
+
+// Global Reset
 *{
     margin: 0;
 }
@@ -24,92 +56,93 @@ main{
     flex-direction: column;
     position: absolute;
     font-family: $font-main;
+
+    header, .cards-container{
+        transform: scale(1.2); // try 1.1 ~ 1.2
+        transform-origin: top center;
+    }
 }
 header{
-    height: 10em;
+    height: $header-height;
     width: 100%;
-    margin-top: 5.25rem;
+    margin-top: $header-margin-top;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 0.91rem;
+    font-size: $font-size-subheader;
     
     h2{
         color: $grey-400;
         font-weight: $w1;
-        font-size: 1.9rem;
-        
+        font-size: $font-size-header;
     }
     h1{
         color: $grey-500;
         font-weight: $w3;
-        font-size: 1.9rem;
+        font-size: $font-size-header;
         margin-top: -0.25rem
     }
     p{
         margin-top: 0.5rem;
-        font-size: 0.78rem;
+        font-size: $font-size-header-p;
         font-weight: $w2;
-        width: 28rem;
+        width: $header-p-width;
     }
 }
 .cards-container{
     width: 100vw;
-    margin-top: 3rem;
-    max-width: 60rem;
+    margin-top: $container-margin-top;
+    max-width: $max-container-width;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
     #supervisor {
-        border-top: 0.25rem solid $cyan;
+        border-top: $card-border-width solid $cyan;
     }
     #team-builder {
-        border-top: 0.25rem solid $red;
+        border-top: $card-border-width solid $red;
     }
     #karma {
-        border-top: 0.25rem solid $orange;
+        border-top: $card-border-width solid $orange;
     }
     #calculator {
-        border-top: 0.25rem solid $blue;
+        border-top: $card-border-width solid $blue;
     }
 }
 .card{
     display: flex;
     flex-direction: column;
-    box-shadow: 0.2rem 0.4rem 1.2rem 0 rgba($grey-500, 0.1), -0.2rem 0.4rem 1.2rem 0 rgba($grey-500, 0.05);
-    width: 22.5rem;
-    height: 10rem;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
-    width: 15rem;
-    border-radius: 2%;
+    box-shadow: $card-shadow-1, $card-shadow-2;
+    width: $card-width;
+    height: $card-height;
+    margin-bottom: $card-margin-bottom;
+    padding: $card-padding;
+    border-radius: $card-radius;
 
     h3{
-        font-size: 1rem;
+        font-size: $font-size-card-title;
         font-weight: $w3;
         color: $grey-500;
-
+        padding-bottom: 0.1rem;
     }
     p{
-        font-size: 0.69rem;
+        font-size: $font-size-card-text;
         color: $grey-400;
         font-weight: $w2;
     }
     img{
-
         height: 35%;   
         object-fit: contain;
         align-self: flex-end;
         margin-top: auto;
-        
     }
 }
 footer{
     margin-top: auto;
 }
-@media(max-width: 850px){
+@media(max-width: $breakpoint-tablet){
     .cards-container{
         flex-direction: column;
     }
