@@ -90,4 +90,14 @@ header p {
   margin-top: auto;
 }
 
+footer {
+  margin-top: auto;
+}
+
+@media (max-width: 850px) {
+  .cards-container {
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
