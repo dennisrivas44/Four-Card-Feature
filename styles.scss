@@ -1,0 +1,108 @@
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$grey-500: hsl(234, 12%, 34%);
+$grey-400: hsl(212, 6%, 44%);
+$white: hsl(0, 0%, 100%);
+$desktop: 1440px;
+$mobile: 375px;
+$font-main: 'Poppins', sans-serif;
+$w1: 200;
+$w2: 400;
+$w3: 600;
+
+*{
+    margin: 0;
+}
+main{
+    width: 100%;
+    height: 100%;
+    color: $grey-400;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    font-family: $font-main;
+}
+header{
+    height: 10em;
+    width: 100%;
+    margin-top: 5.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.91rem;
+    
+    h2{
+        color: $grey-400;
+        font-weight: $w1;
+        font-size: 1.9rem;
+        
+    }
+    h1{
+        color: $grey-500;
+        font-weight: $w3;
+        font-size: 1.9rem;
+        margin-top: -0.25rem
+    }
+    p{
+        margin-top: 0.5rem;
+        font-size: 0.78rem;
+        font-weight: $w2;
+        width: 28rem;
+    }
+}
+.cards-container{
+    width: 100vw;
+    margin-top: 3rem;
+    max-width: 60rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    #supervisor {
+        border-top: 0.25rem solid $cyan;
+    }
+    #team-builder {
+        border-top: 0.25rem solid $red;
+    }
+    #karma {
+        border-top: 0.25rem solid $orange;
+    }
+    #calculator {
+        border-top: 0.25rem solid $blue;
+    }
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.2rem 0.4rem 1.2rem 0 rgba($grey-500, 0.1), -0.2rem 0.4rem 1.2rem 0 rgba($grey-500, 0.05);
+    width: 22.5rem;
+    height: 10rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    width: 15rem;
+    border-radius: 2%;
+
+    h3{
+        font-size: 1rem;
+        font-weight: $w3;
+        color: $grey-500;
+
+    }
+    p{
+        font-size: 0.69rem;
+        color: $grey-400;
+        font-weight: $w2;
+    }
+    img{
+
+        height: 35%;   
+        object-fit: contain;
+        align-self: flex-end;
+        margin-top: auto;
+        
+    }
+}
